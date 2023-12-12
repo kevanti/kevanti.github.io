@@ -1,0 +1,199 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  background: radial-gradient(closest-side, rgb(37, 22, 111), black);
+}
+.container .container__h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container .container__h1 .h1 {
+  color: white;
+  font-family: "Gasoek One";
+  font-size: 50px;
+}
+.container .container1 {
+  width: 150px;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.container .container1 div.container1__first {
+  perspective: 500px;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 2s;
+}
+.container .container1 div.container1__first .first__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 2s, opacity 0.5s;
+}
+.container .container1 div.container1__first .first__img:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+.container .container1 div.container1__first div.back {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  background: radial-gradient(closest-side, rgb(37, 22, 111), black);
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+.container .container1 div.container1__first div.back p {
+  color: white;
+  font-family: "Gasoek One";
+  bottom: 0px;
+  position: absolute;
+}
+.container .container1 div.container1__first:hover {
+  background-color: black;
+  transform: rotateY(180deg);
+  transition-delay: 1s;
+}
+.container .container1 .container1__icon {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.container .container1 img.img1,
+.container .container1 img.img2 {
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.container .container1 img.img1 {
+  width: 28px;
+  margin-right: 8px;
+}
+.container .container1 img.img2 {
+  width: 35px;
+}
+.container .container1:hover img.img1, .container .container1:hover img.img2 {
+  opacity: 1;
+}
+.container .container1 {
+  position: relative;
+  width: 200px;
+  height: 230px;
+  overflow: hidden;
+}
+.container .container1 .container1__first {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+.container .container1 .container1__first .first__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 1s, opacity 0.5s;
+}
+.container .container1 .container1__first .first__img:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+.container .container1 .container1__first:hover {
+  background-color: black;
+}
+.container .container1 {
+  position: relative;
+  border: none;
+  width: 450px;
+  height: 230px;
+  overflow: hidden;
+}
+.container .container1 .container1__first {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+.container .container1 .container1__first:hover {
+  background-color: black;
+}
+.container .container1 .container1__first .first__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s, opacity 0.5s;
+}
+.container .container1 .container1__first .first__img:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+.container .container1 .container1__first .container1__icon {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .container1 .container1__first img.img1,
+.container .container1 .container1__first img.img2 {
+  height: auto; /* Ajusta la altura según sea necesario */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.container .container1 .container1__first img.img1 {
+  width: 33px; /* Ancho deseado para img1 */
+  margin-right: 10px; /* Espaciado entre las imágenes */
+}
+.container .container1 .container1__first img.img2 {
+  width: 41px;
+}
+.container .container1 .container1__first:hover img.img1, .container .container1 .container1__first:hover img.img2 {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 12px;
+    picture{
+        img{
+            width: 100px;
+        }
+    }
+    @include breakpoint(tablet){
+        padding: 0px 35px;
+    }
+}

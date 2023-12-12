@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.container{
+    overflow: hidden;
+    .container__img{
+        position: relative;
+        .img-1{
+            position: absolute;
+            bottom: -700px;
+        }
+        .img-2{
+            position: absolute;
+            top: 0;
+        }
+    }
+    .information{
+        .information__text{
+            background-color: #ECF494;
+            font-family: 'Poppins';
+            text-align: center;
+            padding: 10px;
+            font-weight: 300;
+            color: #1A1A1A;
+        }
+    }
+    .header{
+        display: flex;
+        margin: 30px 150px;
+        justify-content: space-between;
+        align-items: center;
+        .header__nav{
+            .nav__ul{
+                display: flex;
+                list-style: none;
+                gap: 70px;
+                .li__a{
+                    text-decoration: none;
+                    color: #1A1A1A;
+                    font-family: 'Poppins';
+                    font-weight: 600;
+                }
+            }
+        }
+        .interactive{
+            display: flex;
+            gap: 30px;
+            .picture{
+
+                display: flex;
+                gap: 40px;
+            }
+            .button__ul{
+                .button__li{
+                    list-style: none;
+                    
+                }
+                .button__a{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #1A1A1A;
+                    padding: 10px 25px;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+    }//end header
+
+    .main {
+        background-color: #faf6dc;
+        padding: 100px 120px 89px;
+        background-image: url(../img/fruits.png), url(../img/people.png);
+        background-repeat: no-repeat;
+        background-position: right 0px top, right 395px top;
+      
+        .h1 {
+          font-family: 'PT Serif';
+          font-size: 110px;
+          max-width: 1000px;
+          color: #1A1A1A;
+          line-height: 120px;
+          margin-bottom: 50px;
+        }
+        .main__button{
+            margin-bottom: 120px;
+            .button__li{
+                list-style: none;
+                .button__a{
+                    text-decoration: none;
+                    background-color: #1A1A1A;
+                    color: #EAF586;
+                    padding: 12px 40px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .section{
+            display: flex;
+            justify-content: space-between;
+            .section__article{
+                max-width: 400px;
+                display: flex;
+                gap: 20px;
+                .article__information{
+                    .article__title{
+                        font-family: 'PT Serif';
+                        font-weight: 100;
+                        font-size: 20px;
+                        color: #1A1A1A;
+                        margin-bottom: 10px;
+                    }
+                    .article__text{
+                        color: gray;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+      }
+      
+      
+      
+    
+}

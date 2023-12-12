@@ -1,0 +1,227 @@
+@mixin nav-style{
+    display: flex;
+    list-style: none;
+}
+@mixin button-active{
+    padding: 10px 20px;
+    color: white;
+    background-color: #264065;
+    border-radius: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.container{
+    padding: 20px 140px 0px;
+    background-image: url(../img/background.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    .woman{
+        position: absolute;
+        top: -58px;
+        right: -0px;
+        height: 1020px;
+    }
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 90px;
+        picture{
+            min-width: 15%
+        }
+        .header__nav {
+            min-width: 60%;
+            padding-right: 120px;
+          
+            .nav__ul {
+              @include nav-style();
+              justify-content: center;
+              gap: 70px;
+          
+              a {
+                text-decoration: none;
+                color: #264065;
+                position: relative;
+                &:hover {
+                  &::after {
+                    content: '';
+                    width: 80%;
+                    height: 4px;
+                    background-color: #264065;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 10%;
+                  }
+                }
+              }
+            }
+          }
+          
+        .header__button{
+            min-width: 25%;
+            display: flex;
+            justify-content: space-between;
+           .header__icon{
+            .icon__searchBag{
+                align-items: center;
+                picture{
+                    display: flex;
+                    margin-left: auto;
+                    gap: 20px;
+                }
+            }
+        }
+            .header__sign{
+                align-items: center;
+                .sign{
+                    display: flex;
+                    gap: 30px;
+                    .sign__in{
+                        list-style: none;
+                        a{
+                            color: #264065;
+                        }
+                    }
+                    .sign__up{
+                        list-style: none;
+                        a{
+                            @include button-active();
+                            text-decoration: none;
+                        }
+                    }
+                }
+            } 
+        }
+        
+    }//end header
+    .main{
+        .main__section{
+            margin-bottom: 80px;
+            .section__h1{
+                font-size: 75px;
+                font-weight: 700;
+                color: #264065;
+                max-width: 900px;
+                line-height: 80px;
+                margin-bottom: 30px;
+            }
+            .section__text{
+                color: #909090;
+                font-size: 20px;
+                max-width: 750px;
+                margin-bottom: 45px;
+            }
+            .section__button{
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                margin-bottom: 120px;
+                .button__book{
+                    @include button-active();
+                    text-decoration: none;
+                    padding: 15px 40px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                }
+                .button__watch{
+                    color: #264065;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .play{
+                        background: white;
+                        padding: 12px 14px; 
+                        border-radius:50%;
+                        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+                        img{
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }//end first section
+        .main__section-items{
+            display: flex;
+            padding: 30px 0px;
+            background-color: white;
+            border-radius: 15px;
+            max-width: 680px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+            .item{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-items: center;
+                align-items: center;
+                img{
+
+                    width: 85px;
+                    object-fit: contain;
+                    margin-bottom: 25px;
+                }
+                .title{
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: #264065;
+                    margin-bottom: 10px;
+                }
+                .text{
+                    text-align: center;
+                    color: #909090;
+                    font-size: 17px;
+                    max-width: 130px;
+                }
+            }
+        }//end main items
+        .main__testimony{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 70px;
+            top: 400px;
+            min-width: 550px;
+            .testimony__container{
+                display: flex;
+                flex-direction: column;
+                .testimony1 {
+                    background-color: rgba(255, 255, 255, 0.4);
+                    padding: 20px;
+                    border-radius: 20px;
+                    align-self: flex-end;
+                    margin-bottom: 60px;
+                    backdrop-filter: blur(5px);
+                  }
+                  
+                .testimony2{
+                    background-color: rgba(255, 255, 255, 0.4);
+                    opacity: 1;
+                    padding: 20px;
+                    border-radius: 20px;
+                    max-width: fit-content;
+                    backdrop-filter: blur(5px);
+                }
+               .text{
+                font-size: 16px;
+                max-width: 320px;
+                color: #070D15
+                ;
+            }
+                .testimony__name{
+                    font-size: 17px;
+                    color: #264065;
+                    font-weight: 700;
+                } 
+                .comillas{
+                    width: 25px;
+                }
+            }
+            
+        }
+    }
+}

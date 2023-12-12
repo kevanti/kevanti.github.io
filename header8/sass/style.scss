@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    overflow: hidden;
+}
+.container{
+    padding: 20px 130px 0px;
+    background-image: url(../img/background.svg);
+    .header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        .header__nav{
+            min-width: 20%;
+            .nav__ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                
+                .li__a{
+                    text-decoration: none;
+                    font-family: 'Quattrocento Sans';
+                    color: #303030;
+                    font-size: 20px;
+                    
+                }
+            }
+        }
+        .container__h2{
+            color: #303030;
+            min-width: 60%;
+            display: flex;
+            font-family: 'Oswald';
+            font-size: 40px;
+            justify-content: center;
+            span{
+                color: gray;
+            }
+        }
+        .social {
+            min-width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+          }
+          
+    }
+
+    .main{
+        .name{
+            font-size: 75px;
+            font-family: 'Oswald';
+            color: #303030;
+            text-align: center;
+            
+        }
+        .section{
+            display: flex;
+            justify-content: space-between;
+            .service{
+                min-width: auto;
+                .container__service{
+                    .services__title{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 25px;
+                        gap: 20px;
+                        picture{
+                            img{
+                                background-color: #F6F6F6;
+                                padding: 7px;
+                            }
+                        }
+                        .service__title{
+                            font-family: 'Oswald';
+                            font-size: 20px;
+                        }
+                        
+                        
+                    }
+                    .main__text{
+                            color: #909090;
+                            margin-bottom: 40px;
+                            font-family: 'Quattrocento Sans';
+                            font-size: 20px;
+                        }
+                }
+            }
+            .container2{
+                display: flex;
+                justify-content: end;
+                gap: 50px;
+                .image{
+                    display: flex;
+                    justify-content: center;
+                }
+                .special{
+                    max-width: 32%;
+                    .main__text{
+                        color: #909090;
+                        margin-bottom: 50px;
+                        font-family: 'Quattrocento Sans';
+                        font-size: 20px;
+                    }
+                    .special__ul{
+                        margin-bottom: 90px;
+                        .ul__li{
+                            list-style: none;
+                            
+                        }
+                        .li__a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 20px;
+                                background-color: #303030;
+                                padding: 15px 30px;
+                        }
+                    }
+                    .more__information{
+                        display: flex;
+                        gap: 40px;
+                        .title{
+                            font-family: 'Oswald';
+                            font-size: 30px;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                        .text{
+                            color: #909090;
+                        }
+                    }
+                    
+                }
+            }
+            .main__title{
+                font-family: 'Oswald';
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 25px;
+                margin-top: 100px;
+            }
+        }
+
+    }
+    
+}

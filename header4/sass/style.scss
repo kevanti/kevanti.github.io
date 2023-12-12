@@ -1,0 +1,287 @@
+//Declaramos las variables
+$primary-color-text: #8E8E8E;
+$text-color-menu: #2E2F38;
+$color-h1:#2E2F38;
+$color-button-text: #FFFFFF;
+$backround-color-button: #FA504D;
+$font-h1-h2: 'Belgrano';
+$font-text: 'Poppins';
+
+/**
+BEM(Block, Element, Modifier)
+[Bloque]
+[Bloque]__[Elemento]
+[Bloque]--[Modificador]
+[Elemento]--[Modificador]
+[Bloque]__[Elemento]--[Modificador]
+*/
+@mixin button-on{
+    text-decoration: none;
+    background-color: $backround-color-button;
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-weight: bold;
+}
+@mixin button-of{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-weight: bold;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    background-image: url(../img/background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+    height: 100vh;
+    margin: 0;
+    
+
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-bottom: 70px;
+        .header__container-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+  
+        .header__nav {
+        width: 30%;
+    
+            .nav__ul {
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                width: 100%;
+                color: $text-color-menu;
+            }
+        }
+  
+        .header__container-sign {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+  
+            .container-sign__ul {
+                display: flex;
+                list-style: none;
+                text-decoration: none;
+
+                .container-sign__up{
+                    font-weight: bold;
+                    gap: 20px;
+                    .sign__up{
+                        text-decoration: none;
+                        color: white;
+                        padding-right: 20px;
+                        
+                    }
+                    .sign__in{
+                        text-decoration: none;
+                        background-color: $backround-color-button;
+                        padding: 10px;
+                        padding-right: 30px;
+                        padding-left: 30px;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .section{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        .section__article-information{
+            position: relative;
+            
+            .article__h1 {
+                font-size: 80px;
+                font-family: 'Belgrano';
+                font-weight: 100;
+                line-height: 80px;
+                margin-bottom: 20px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 300px;
+                    height: 150px;
+                    background-image: url('../img/Vector.svg');
+                    background-repeat: no-repeat;
+                    background-size: 300px;
+                    left: 160px;
+                    z-index: 1;
+                }
+            }
+            
+            
+            .article__p{
+                font-size: 20px;
+                font-family: 'Poppins';
+                font-weight: 400;
+                color: $primary-color-text;
+                margin-bottom: 45px;
+            }
+            .article__p-underline{
+                text-decoration: underline;
+                text-decoration-color: #FA504D;
+                text-decoration-thickness: 3px;
+            }
+            .article__button{
+                display: flex;
+                margin-bottom: 80px;
+                
+                .button__explore{
+                    @include button-on;
+                    padding-left: 60px;
+                    padding-right: 60px;
+                    margin-right: 40px;                    
+                }
+                .button__learn-more{
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                    font-family: 'Poppins';
+                }
+            }
+            .article__featured{
+                display: flex;
+                flex-direction: column;
+
+                
+                
+                .article__h2{
+                    font-family: 'Belgrano';
+                    margin-bottom: 40px;
+                }
+                .featured__img{
+                    display: flex;
+                    width: 408px;
+                    height: 240px;
+                    gap: 30px;
+                    
+                    
+                }
+            }
+        }
+        .article__buy{
+            background-image: url(../img/image.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            .buy__information{
+                position: absolute;
+                bottom: 70px;
+                left: 30px;
+                background-color: white;
+                height: 150px;
+                width: 85%;
+                padding: 20px;
+                .information__user{
+                    display: flex;
+                    margin-bottom: 20px;
+                    .user__img{
+                        margin-right: 20px;
+                    
+                    }
+                    .user_id{
+                        font-family: 'Poppins';
+                        font-size: 20px;
+
+                        .user__atwork{
+                            font-weight: bold;
+                        }
+                    }
+                    .user__buy-quantity{
+                        font-family: 'Poppins';
+                        margin-left: 220px;
+                        font-size: 20px;
+
+                        .user__price{
+                            font-weight: bold;
+                        }
+                        
+                    }
+                }
+                .buy__button{
+                    margin-top: 20px;
+                    display: flex;
+
+                    .confirm-buy{
+                        background-color: $backround-color-button;
+                        @include button-on;
+                        padding-left: 80px;
+                        padding-right: 100px;
+                        margin-right: 20px;
+                    }
+                    .confirm-details{
+                        @include button-of;
+                        color: #FA504D;
+                        padding-left: 100px;
+                        padding-right: 80px;
+
+                        
+                    }
+                }
+                
+            }
+        }
+        @mixin additional-numbers{
+            font-family: 'Poppins';
+            font-weight: 700;
+            color: #FA504D;
+            font-size: 20px;
+        }
+        .buy__information__artist{
+            width: 85%;
+            
+            position: absolute;
+            bottom: 0px;
+            left: 50px;
+            .information__additional{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .additional{
+                    display: flex;
+                    align-items: center;
+                    .additional__numbers{
+                    @include additional-numbers;
+                    }
+                }
+                
+                .additional__text{
+                    font-family: 'Poppins';
+                    font-weight: none;
+                    margin-left: 10px;
+                    font-size: 15px;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+
+
+
