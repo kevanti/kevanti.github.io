@@ -43,7 +43,7 @@
       
       
       div.container1__first {
-        perspective: 500px;
+        perspective: 1000px;
         transform-style: preserve-3d;
         position: relative;
         width: 100%;
@@ -56,7 +56,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 2s, opacity 0.5s;
+          transition: transform 2s;
   
           &:hover {
             transform: scale(1.1);
@@ -66,25 +66,25 @@
         div.back{
           width: 100%;
           height: 100%;
-          object-fit: contain;
           position: absolute;
           background: radial-gradient(closest-side, rgb(37, 22, 111), black);
           backface-visibility: hidden;
           transform: rotateY(180deg);
-          transition: transform 1s;
           p{
             color: white;
             font-family: 'Gasoek One';
             bottom: 0px;
             position: absolute;
           }
+          &:hover{
+            transform: rotateY(180deg);
+          }
 
         }
   
         &:hover {
-          background-color: black;
           transform: rotateY(180deg);
-          transition-delay: 1s;
+          transition-delay: 1.5s;
         }
       }
   
@@ -142,7 +142,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                transition: transform 1s, opacity 0.5s;
+                transition: transform 1s;
 
                 &:hover {
                     transform: scale(1.1);
