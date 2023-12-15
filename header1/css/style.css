@@ -104,18 +104,19 @@ div>p:last-child{
     gap: 20px;
 }
 .articleInformation>section{
-    width: 300px;
+    max-width: 300px;
     padding: 30px;
     background: white;
 }
 .bold{
-    font-size: 23px;
+    font-size: 20px;
     color: #424241;
+    margin-bottom: 5px;
 }
 .bold~p{
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
-    font-size: 18px;
+    font-size: 15px;
     color: #909090;
 }
 .section1{
