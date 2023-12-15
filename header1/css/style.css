@@ -1,57 +1,64 @@
-body{
-    padding-left: 145px;
-    padding-right: 145px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.container{
     background-image: url(../img/hero.png);
     background-repeat: no-repeat;
+    background-size: 60%;
     background-position: right top;
+    max-width: 1440px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 15px 30px;
     
 }
-body>header{
+header{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-}
-header>img{
-    object-fit: contain;
+    margin-bottom: 60px;
 }
 nav>ul{
     display: flex;
-    justify-content: flex-end;
     list-style: none;
-    gap: 50px;
+    gap: 70px;
 }
 li{
-    font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 300;
+    color: #424241;
 }
 
 main{
-    margin-top: 90px;
     display: flex;
-    width: 784px;
-    height: 428px;
     flex-direction: column;
 }
 span{
     color: rgb(112, 226, 192);
 }
+
+
+
 h1{
-    margin-top: 0;
-    font-size: 86px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
+    font-size: 101px;
+    font-family: 'Bebas Neue';
+    font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     line-height: 110px;
+    max-width: 900px;
+    color: #424241;
+}
+h1 span{
+    font-family: 'Bebas Neue';
 }
 main>article>p{
-    font-size: 25px;
-    color: gray;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
-    padding-right: 180px;
-    margin-top: 0%;
+    font-size: 20px;
+    color: #909090;
+    line-height: 25px;
+    max-width: 600px;
 
 }
 main>article>ul{
@@ -61,8 +68,9 @@ main>article>ul{
 }
 .discuss{
     background: rgb(112, 226, 192);
-    padding: 10px;
+    padding: 10px 20px;
     list-style: none;
+    margin-bottom: 30px;
 }
 .discuss>a{
     text-decoration: none;
@@ -72,34 +80,27 @@ main>article>ul{
     font-weight: 200;
     width: max-content;
 }
-
 .containerMain{
-    margin-top: 30px;
     display: flex;
-}
-.containerMain>div{
-    padding-right: 130px;
+    gap: 50px;
+    margin-bottom: 35px;
 }
 
 .containerMain>div>p{
     text-align: center;
-    font-family: 'Oswald', sans-serif;
     font-weight: 200;
+    color: #424241;
 }
-
 div>p:first-child{
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 0;
 }
 div>p:last-child{
-    font-size: 20px;
-    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 300;
+    color: #909090;
 }
 
-.information{
-    margin-top: 240px;
-}
 .articleInformation{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -112,13 +113,14 @@ div>p:last-child{
     background: white;
 }
 .bold{
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    color: #424241;
 }
 .bold~p{
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 18px;
+    color: #909090;
 }
 .section1{
     grid-column: 1 / span 1;
