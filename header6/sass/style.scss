@@ -8,29 +8,36 @@
     background-color: #264065;
     border-radius: 20px;
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
     font-weight: 400;
 }
-.container{
-    padding: 20px 140px 0px;
-    background-image: url(../img/background.svg);
+.container {
+    background-image:url(../img/background.png);
     background-size: contain;
     background-repeat: no-repeat;
-    .woman{
+    max-width: 1440px;
+    margin: auto;
+    padding: 35px 50px;
+    figure{
+        max-width: 700px;
+        position: relative;
+        right: -550px;
+        .woman{
         position: absolute;
-        top: -58px;
-        right: -0px;
-        height: 1020px;
+        top: 50px;
+        max-width: 100%;
+        object-fit: contain;
+    }
     }
     
     .header{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 90px;
+        margin-bottom: 100px;
         picture{
             min-width: 15%
         }
@@ -100,31 +107,32 @@
         
     }//end header
     .main{
+        position: relative;
         .main__section{
-            margin-bottom: 80px;
             .section__h1{
-                font-size: 75px;
+                font-size: 65px;
                 font-weight: 700;
                 color: #264065;
-                max-width: 900px;
-                line-height: 80px;
-                margin-bottom: 30px;
+                max-width: 750px;
+                line-height: 60px;
+                margin-bottom: 25px;
             }
             .section__text{
                 color: #909090;
                 font-size: 20px;
-                max-width: 750px;
-                margin-bottom: 45px;
+                max-width: 600px;
+                margin-bottom: 30px;
             }
             .section__button{
                 display: flex;
                 align-items: center;
                 gap: 50px;
-                margin-bottom: 120px;
+                font-size: 16px;
+                margin-bottom: 50px;
                 .button__book{
                     @include button-active();
                     text-decoration: none;
-                    padding: 15px 40px;
+                    padding: 10px 30px;
                     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
                 }
                 .button__watch{
@@ -132,15 +140,16 @@
                     text-decoration: none;
                     display: flex;
                     align-items: center;
-                    gap: 5px;
+                    gap: 10px;
                     .play{
                         background: white;
-                        padding: 12px 14px; 
+                        padding: 10px 12px; 
                         border-radius:50%;
                         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
                         img{
                             display: flex;
                             justify-content: center;
+                            max-width: 100%;
                         }
                     }
                 }
@@ -148,10 +157,10 @@
         }//end first section
         .main__section-items{
             display: flex;
-            padding: 30px 0px;
+            padding: 20px 0px;
             background-color: white;
-            border-radius: 15px;
-            max-width: 680px;
+            border-radius: 20px;
+            max-width:550px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             .item{
                 display: flex;
@@ -160,13 +169,12 @@
                 justify-items: center;
                 align-items: center;
                 img{
-
-                    width: 85px;
+                    max-width: 50%;
                     object-fit: contain;
-                    margin-bottom: 25px;
+                    margin-bottom: 15px;
                 }
                 .title{
-                    font-size: 25px;
+                    font-size: 23px;
                     font-weight: 500;
                     color: #264065;
                     margin-bottom: 10px;
@@ -174,8 +182,8 @@
                 .text{
                     text-align: center;
                     color: #909090;
-                    font-size: 17px;
-                    max-width: 130px;
+                    font-size: 12px;
+                    max-width: 90px;
                 }
             }
         }//end main items
@@ -183,9 +191,8 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: 70px;
-            top: 400px;
-            min-width: 550px;
+            right: 20px;
+            top: 200px;
             .testimony__container{
                 display: flex;
                 flex-direction: column;
@@ -194,31 +201,30 @@
                     padding: 20px;
                     border-radius: 20px;
                     align-self: flex-end;
-                    margin-bottom: 60px;
+                    margin-bottom: 30px;
                     backdrop-filter: blur(5px);
+                    max-width: 350px;
                   }
-                  
                 .testimony2{
                     background-color: rgba(255, 255, 255, 0.4);
-                    opacity: 1;
                     padding: 20px;
                     border-radius: 20px;
-                    max-width: fit-content;
                     backdrop-filter: blur(5px);
+                    margin-right: 150px;
+                    max-width: 350px;
                 }
                .text{
-                font-size: 16px;
-                max-width: 320px;
-                color: #070D15
-                ;
+                font-size: 14px;
+                max-width: 300px;
+                color: #070D15;
             }
                 .testimony__name{
-                    font-size: 17px;
+                    font-size: 18px;
                     color: #264065;
                     font-weight: 700;
                 } 
                 .comillas{
-                    width: 25px;
+                    max-width: 23px;
                 }
             }
             

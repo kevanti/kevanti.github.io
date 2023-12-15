@@ -7,21 +7,29 @@
 }
 
 .container {
-  padding: 20px 140px 0px;
-  background-image: url(../img/background.svg);
+  background-image: url(../img/background.png);
   background-size: contain;
   background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: auto;
+  padding: 35px 50px;
 }
-.container .woman {
+.container figure {
+  max-width: 700px;
+  position: relative;
+  right: -550px;
+}
+.container figure .woman {
   position: absolute;
-  right: 0px;
-  height: 1020px;
-  top: -52px;
+  top: 50px;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 }
 .container .header picture {
   min-width: 15%;
@@ -86,28 +94,29 @@
   border-radius: 20px;
   text-decoration: none;
 }
-.container .main .main__section {
-  margin-bottom: 80px;
+.container .main {
+  position: relative;
 }
 .container .main .main__section .section__h1 {
-  font-size: 75px;
+  font-size: 65px;
   font-weight: 700;
   color: #264065;
-  max-width: 900px;
-  line-height: 80px;
-  margin-bottom: 30px;
+  max-width: 750px;
+  line-height: 60px;
+  margin-bottom: 25px;
 }
 .container .main .main__section .section__text {
   color: #909090;
   font-size: 20px;
-  max-width: 750px;
-  margin-bottom: 45px;
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 .container .main .main__section .section__button {
   display: flex;
   align-items: center;
   gap: 50px;
-  margin-bottom: 120px;
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 .container .main .main__section .section__button .button__book {
   padding: 10px 20px;
@@ -115,7 +124,7 @@
   background-color: #264065;
   border-radius: 20px;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 10px 30px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 .container .main .main__section .section__button .button__watch {
@@ -123,24 +132,25 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 .container .main .main__section .section__button .button__watch .play {
   background: white;
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .container .main .main__section .section__button .button__watch .play img {
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 .container .main .main__section-items {
   display: flex;
-  padding: 30px 0px;
+  padding: 20px 0px;
   background-color: white;
-  border-radius: 15px;
-  max-width: 680px;
+  border-radius: 20px;
+  max-width: 550px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .container .main .main__section-items .item {
@@ -151,13 +161,13 @@
   align-items: center;
 }
 .container .main .main__section-items .item img {
-  width: 85px;
+  max-width: 50%;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .container .main .main__section-items .item .title {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 500;
   color: #264065;
   margin-bottom: 10px;
@@ -165,16 +175,15 @@
 .container .main .main__section-items .item .text {
   text-align: center;
   color: #909090;
-  font-size: 17px;
-  max-width: 130px;
+  font-size: 12px;
+  max-width: 90px;
 }
 .container .main .main__testimony {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 70px;
-  top: 400px;
-  min-width: 550px;
+  right: 20px;
+  top: 200px;
 }
 .container .main .main__testimony .testimony__container {
   display: flex;
@@ -185,30 +194,30 @@
   padding: 20px;
   border-radius: 20px;
   align-self: flex-end;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  max-width: 350px;
 }
 .container .main .main__testimony .testimony__container .testimony2 {
   background-color: rgba(255, 255, 255, 0.4);
-  opacity: 1;
   padding: 20px;
   border-radius: 20px;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  margin-right: 150px;
+  max-width: 350px;
 }
 .container .main .main__testimony .testimony__container .text {
-  font-size: 16px;
-  max-width: 320px;
+  font-size: 14px;
+  max-width: 300px;
   color: #070D15;
 }
 .container .main .main__testimony .testimony__container .testimony__name {
-  font-size: 17px;
+  font-size: 18px;
   color: #264065;
   font-weight: 700;
 }
 .container .main .main__testimony .testimony__container .comillas {
-  width: 25px;
+  max-width: 23px;
 }/*# sourceMappingURL=style.css.map */
