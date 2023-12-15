@@ -1,6 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
-    padding-right: 180px;
-    padding-left: 180px;
+    max-width: 1440px;
+    margin: auto;
+    border: 1px solid black;
+    background-image: url(../img/Placeholder.png);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: left 20px top 110px;
+    padding: 20px 20px;
 }
 a{
     text-decoration: none;
@@ -8,20 +19,14 @@ a{
     color: #909090;
 }
 .header{
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
-}
-.header{
-    list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 .header__menu>ul{
-    width: 400px;
-    gap: 70px;
+    gap: 60px;
     display: flex;
     list-style: none;
 }
@@ -32,7 +37,7 @@ a{
 .header__sing>ul{
     list-style: none;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -42,22 +47,17 @@ a{
 .header__sing ul li:last-child{
     background-color: #9B9A78;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 27px;
 }
 .header__sing li:last-child a {
     color: white;
 }
 
 .hero{
-    background-image: url(../img/Placeholder.svg);
-    background-repeat: no-repeat;
-    background-size: 60%;
     display: flex;
     margin-bottom: 30px;
     justify-content: end;
+    max-width: 100%;
 }
 .hero__span::after{
     content: "";
@@ -65,21 +65,22 @@ a{
     height: 8px;
     background-color: #9B9A78;
     display: inline-block;
-    vertical-align: middle;/*Esto se usa para centrarlo junto a la letra. Solo se usa dentro de after y before*/
+    vertical-align: middle;
     margin-left: 30px;
     
 }
 .hero > .hero__container1{
-    margin-top: 60px;
     width: 700px;background-color: rgba(255, 255, 255, 0.445);
     opacity: 0.8px;
     padding: 30px;
     backdrop-filter: blur(6px);
+    margin: 0px 50px 0px 0px;
 }
 .hero__container1>h1{
+    color: #313131;
     font-size: 70px;
-    margin:0;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    line-height: 70px;
 }
 .hero__container1>p{
     font-family: 'Poppins';
@@ -89,16 +90,12 @@ a{
 .container__out{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
-}
-.container__out{
+    margin: 0px 100px 60px 0px;
     font-family: 'Poppins';
-    color: black;
+    color: #313131;
 }
 .hero__container2{
     gap: 20px;
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr)
@@ -114,10 +111,10 @@ a{
 
 .container__end{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .container__end>div{
-    width: 360px;
+    max-width: 340px;
 }
 
 .container__end>div p{
