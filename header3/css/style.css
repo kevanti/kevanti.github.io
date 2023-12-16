@@ -6,7 +6,6 @@
 .container{
     max-width: 1440px;
     margin: auto;
-    border: 1px solid black;
     background-image: url(../img/Placeholder.png);
     background-repeat: no-repeat;
     background-size: 55%;
