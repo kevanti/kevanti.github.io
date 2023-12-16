@@ -5,18 +5,9 @@
     font-family: 'Poppins';
 }
 .container{
-    overflow: hidden;
-    .container__img{
-        position: relative;
-        .img-1{
-            position: absolute;
-            bottom: -700px;
-        }
-        .img-2{
-            position: absolute;
-            top: 0;
-        }
-    }
+    max-width: 1440px;
+    margin: auto;
+    
     .information{
         .information__text{
             background-color: #ECF494;
@@ -29,9 +20,9 @@
     }
     .header{
         display: flex;
-        margin: 30px 150px;
         justify-content: space-between;
         align-items: center;
+        margin: 20px 20px;
         .header__nav{
             .nav__ul{
                 display: flex;
@@ -72,28 +63,27 @@
 
     .main {
         background-color: #faf6dc;
-        padding: 100px 120px 89px;
         background-image: url(../img/fruits.png), url(../img/people.png);
         background-repeat: no-repeat;
         background-position: right 0px top, right 395px top;
-      
+        padding: 90px 20px 0px;
         .h1 {
           font-family: 'PT Serif';
-          font-size: 110px;
-          max-width: 1000px;
+          font-size: 75px;
+          max-width: 700px;
           color: #1A1A1A;
-          line-height: 120px;
-          margin-bottom: 50px;
+          line-height: 85px;
+          margin-bottom: 80px;
         }
         .main__button{
-            margin-bottom: 120px;
+            margin-bottom: 200px;
             .button__li{
                 list-style: none;
                 .button__a{
                     text-decoration: none;
                     background-color: #1A1A1A;
                     color: #EAF586;
-                    padding: 12px 40px;
+                    padding: 15px 40px;
                     border-radius: 10px;
                 }
             }
@@ -101,6 +91,7 @@
         .section{
             display: flex;
             justify-content: space-between;
+            padding: 10px 0px 40px;
             .section__article{
                 max-width: 400px;
                 display: flex;
