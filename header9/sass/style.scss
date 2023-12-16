@@ -6,9 +6,10 @@
 }
 .container{
     background-color: #2b2b38;
-    padding: 20px 120px 0px;
+    max-width: 1440px;
+    padding: 20px 20px 0px ;
     position: relative;
-    overflow: hidden;
+    margin: auto;
     .img-1{
         position: absolute;
         right: 0px;
@@ -25,6 +26,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 90px;
+        margin-right: 150px;
         
         .nav__ul{
             display: flex;
@@ -46,27 +48,27 @@
             color: white;
             font-family: 'Merriweather';
             font-weight: 700;
-            font-size: 80px;
+            font-size: 70px;
             max-width: 800px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .main__text{
             color: gray;
-            font-size: 22px;
-            max-width: 620px;
-            margin-bottom: 50px;
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 60px;
         }
         .button{
             display: flex;
             gap: 70px;
-            margin-bottom: 150px;
+            margin-bottom: 140px;
             .button__on{
                 list-style: none;
                 .on{
                     text-decoration: none;
                     color: white;
                     background-color: #fd0098;
-                    padding: 15px 60px;
+                    padding: 15px 50px;
                     border-radius: 10px;
                     font-size: 20px;
                 }
@@ -97,37 +99,38 @@
             }
         }
         
-
-
-
-
-
         .images{
             .pictures{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(3, 1fr);
-                gap: 30px;
+                gap: 20px;
+                max-width: 100px;
                 .img1{
                     grid-column: 1 / span 1;
                     grid-row: 1 / span 2;
+                    max-width: 190px;
                 }
                 .img2{
                     grid-column: 2 / span 1;
                     grid-row: 1 / span 1;
+                    max-width: 190px;
                 }
                 .img3{
                     grid-column: 3 / span 1;
                     grid-row: 1 / span 3;
                     align-self: center;
+                    max-width: 190px;
                 }
                 .img4{
                     grid-column: 1 / span 1;
                     grid-area: 3 / span 1;
+                    max-width: 190px;
                 }
                 .img5{
                     grid-column: 2 / span 1;
                     grid-row: 2 / span 2;
+                    max-width: 190px;
                 }
             }
             
