@@ -9,46 +9,41 @@ BEM(Block, Element, Modifier)
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 30px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px 20px 0px;
   background-image: url(../img/background.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top right;
-  height: 100vh;
-  margin: 0;
 }
 .container .header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
   font-family: "Poppins";
   font-weight: 400;
   margin-bottom: 70px;
-}
-.container .header .header__container-img {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .container .header .header__nav {
-  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
 }
 .container .header .header__nav .nav__ul {
   display: flex;
+  gap: 60px;
   list-style: none;
-  justify-content: space-between;
-  width: 100%;
   color: #2E2F38;
 }
 .container .header .header__container-sign {
   display: flex;
-  width: 50%;
   justify-content: flex-end;
+  align-items: center;
 }
 .container .header .header__container-sign .container-sign__ul {
   display: flex;
@@ -72,48 +67,49 @@ BEM(Block, Element, Modifier)
   padding-left: 30px;
   color: white;
 }
-.container .section {
+.container .main .section {
   display: grid;
   grid-template-columns: 60% 40%;
 }
-.container .section .section__article-information {
+.container .main .section .section__article-information {
   position: relative;
 }
-.container .section .section__article-information .article__h1 {
-  font-size: 80px;
+.container .main .section .section__article-information .article__h1 {
+  font-size: 60px;
   font-family: "Belgrano";
   font-weight: 100;
   line-height: 80px;
+  max-width: 750px;
   margin-bottom: 20px;
 }
-.container .section .section__article-information .article__h1::before {
+.container .main .section .section__article-information .article__h1::before {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 150px;
+  max-width: 300px;
+  max-height: 150px;
   background-image: url("../img/Vector.svg");
   background-repeat: no-repeat;
   background-size: 300px;
   left: 160px;
   z-index: 1;
 }
-.container .section .section__article-information .article__p {
+.container .main .section .section__article-information .article__p {
   font-size: 20px;
   font-family: "Poppins";
   font-weight: 400;
   color: #8E8E8E;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
-.container .section .section__article-information .article__p-underline {
+.container .main .section .section__article-information .article__p-underline {
   text-decoration: underline;
   text-decoration-color: #FA504D;
   text-decoration-thickness: 3px;
 }
-.container .section .section__article-information .article__button {
+.container .main .section .section__article-information .article__button {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
-.container .section .section__article-information .article__button .button__explore {
+.container .main .section .section__article-information .article__button .button__explore {
   text-decoration: none;
   background-color: #FA504D;
   padding: 10px;
@@ -125,68 +121,97 @@ BEM(Block, Element, Modifier)
   padding-right: 60px;
   margin-right: 40px;
 }
-.container .section .section__article-information .article__button .button__learn-more {
+.container .main .section .section__article-information .article__button .button__learn-more {
   display: flex;
   align-items: center;
   color: black;
   font-family: "Poppins";
 }
-.container .section .section__article-information .article__featured {
+.container .main .section .section__article-information .article__featured {
   display: flex;
   flex-direction: column;
 }
-.container .section .section__article-information .article__featured .article__h2 {
+.container .main .section .section__article-information .article__featured .article__h2 {
   font-family: "Belgrano";
   margin-bottom: 40px;
+  font-weight: 400;
+  color: #2E2F38;
 }
-.container .section .section__article-information .article__featured .featured__img {
+.container .main .section .section__article-information .article__featured .featured__img {
   display: flex;
-  width: 408px;
-  height: 240px;
   gap: 30px;
 }
-.container .section .article__buy {
+.container .main .section .section__article-information .article__featured .featured__img img {
+  max-width: 350px;
+}
+.container .main .section .article__buy {
   background-image: url(../img/image.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  display: grid;
 }
-.container .section .article__buy .buy__information {
+.container .main .section .article__buy::before {
+  content: "";
   position: absolute;
-  bottom: 70px;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 83%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.container .main .section .article__buy .buy__information {
+  position: absolute;
+  bottom: 110px;
   left: 30px;
   background-color: white;
-  height: 150px;
-  width: 85%;
+  max-height: 300px;
   padding: 20px;
-}
-.container .section .article__buy .buy__information .information__user {
+  width: 90%;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .main .section .article__buy .buy__information .information__user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
+  gap: 130px;
 }
-.container .section .article__buy .buy__information .information__user .user__img {
-  margin-right: 20px;
-}
-.container .section .article__buy .buy__information .information__user .user_id {
-  font-family: "Poppins";
-  font-size: 20px;
-}
-.container .section .article__buy .buy__information .information__user .user_id .user__atwork {
-  font-weight: bold;
-}
-.container .section .article__buy .buy__information .information__user .user__buy-quantity {
-  font-family: "Poppins";
-  margin-left: 220px;
-  font-size: 20px;
-}
-.container .section .article__buy .buy__information .information__user .user__buy-quantity .user__price {
-  font-weight: bold;
-}
-.container .section .article__buy .buy__information .buy__button {
-  margin-top: 20px;
+.container .main .section .article__buy .buy__information .information__user .user__img-name {
   display: flex;
+  gap: 10px;
 }
-.container .section .article__buy .buy__information .buy__button .confirm-buy {
+.container .main .section .article__buy .buy__information .information__user .user_id {
+  font-family: "Poppins";
+  font-size: 20px;
+}
+.container .main .section .article__buy .buy__information .information__user .user_id .user__atwork {
+  font-weight: bold;
+}
+.container .main .section .article__buy .buy__information .information__user .user__buy-quantity {
+  grid-template-rows: 1fr 1fr;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+.container .main .section .article__buy .buy__information .information__user .user__buy-quantity .user__ofert {
+  display: flex;
+  justify-content: end;
+}
+.container .main .section .article__buy .buy__information .information__user .user__buy-quantity .user__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+}
+.container .main .section .article__buy .buy__information .buy__button {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .main .section .article__buy .buy__information .buy__button .confirm-buy {
   background-color: #FA504D;
   text-decoration: none;
   background-color: #FA504D;
@@ -195,11 +220,10 @@ BEM(Block, Element, Modifier)
   font-family: "Poppins";
   font-weight: 400;
   font-weight: bold;
-  padding-left: 80px;
-  padding-right: 100px;
-  margin-right: 20px;
+  display: flex;
+  justify-content: center;
 }
-.container .section .article__buy .buy__information .buy__button .confirm-details {
+.container .main .section .article__buy .buy__information .buy__button .confirm-details {
   text-decoration: none;
   padding: 10px;
   color: white;
@@ -207,34 +231,36 @@ BEM(Block, Element, Modifier)
   font-weight: 400;
   font-weight: bold;
   color: #FA504D;
-  padding-left: 100px;
-  padding-right: 80px;
+  display: flex;
+  justify-content: center;
 }
-.container .section .buy__information__artist {
-  width: 85%;
+.container .main .section .buy__information__artist {
   position: absolute;
-  bottom: 0px;
-  left: 50px;
+  bottom: 50px;
+  width: 90%;
 }
-.container .section .buy__information__artist .information__additional {
+.container .main .section .buy__information__artist .information__additional {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 45px;
 }
-.container .section .buy__information__artist .information__additional .additional {
+.container .main .section .buy__information__artist .information__additional .additional {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  max-width: 500px;
+  gap: 10px;
 }
-.container .section .buy__information__artist .information__additional .additional .additional__numbers {
+.container .main .section .buy__information__artist .information__additional .additional .additional__numbers {
   font-family: "Poppins";
   font-weight: 700;
   color: #FA504D;
   font-size: 20px;
 }
-.container .section .buy__information__artist .information__additional .additional__text {
+.container .main .section .buy__information__artist .information__additional .additional__text {
   font-family: "Poppins";
   font-weight: none;
-  margin-left: 10px;
   font-size: 15px;
   color: white;
 }/*# sourceMappingURL=style.css.map */
