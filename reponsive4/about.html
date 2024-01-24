@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About</title>
+
+        <link rel="stylesheet" href="asstets/css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+          <!--Menu-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+      #sideNav {
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: #495567;
+      }
+
+      #sideNav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      #sideNav a:hover {
+          color: #f1f1f1;
+      }
+
+      #main {
+          transition: margin-left .5s;
+      }
+
+      #toggleMenu {
+          display: none;
+      }
+  </style>
+    </head>
+    <body>
+      <script type="module" src="/main.js"></script>
+
+      <div class="container">
+        <header class="header">
+          
+          <button id="toggleMenu" class="btn btn-dark" onclick="toggleMenu()">☰</button>
+          <img src="asstets/img/logo.svg" alt="" class="header__logo">
+  
+          <ul class="header__ul">
+            <li class="header__ul__li"><a href="about.html" class="header__ul__li__a">About</a></li>
+            <li class="header__ul__li"><a href="locations.html" class="header__ul__li__a">Location</a></li>
+            <li class="header__ul__li"><a href="careers.html" class="header__ul__li__a">Careers</a></li>
+            <li class="header__ul__li"><a href="#" class="header__ul__li__a header__ul__li__buy">Get Scootin</a></li>
+          </ul>
+      </header>
+  
+      <div id="sideNav" class="bg-dark">
+          <a href="#" class="text-white" onclick="cerrarMenu()">×</a>
+          <a href="about.html">About</a>
+          <a href="locations.html">Location de</a>
+          <a href="careers.html">Careers</a>
+          <a href="#">Get Scootin</a>
+      </div>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+      <script>
+        function toggleMenu() {
+          var sideNav = document.getElementById("sideNav");
+          var mainContent = document.getElementById("main");
+  
+          // Obtener el ancho calculado
+          var sideNavWidth = window.getComputedStyle(sideNav).width;
+  
+          if (sideNavWidth === "250px") {
+            cerrarMenu();
+          } else {
+            abrirMenu();
+          }
+        }
+  
+        function abrirMenu() {
+          document.getElementById("sideNav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        function cerrarMenu() {
+          document.getElementById("sideNav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+
+            <main class="main">
+                <div class="main__container__information__about">
+                    <h2 class="main__container__information__about__h2 main__title">About</h2>
+                </div>
+
+
+                <section class="main__section__advantages">
+                  <article class="main__section__advantages__article main__section__advantages__article__circle">
+                    <img src="asstets/img/digital-era.jpg" alt="" class="main__section__advantages__article__img">
+                    <div class="main__section__advantages__article__container">
+                      <p class="main__section__advantages__article__container__title main__title">
+                        Mobility for the digital era
+                      </p>
+                    <p class="main__section__advantages__article__container__text main__text">
+                      Getting around should be simple (and even fun!) for everyone. We embrace technology to provide low cost, smart access to scooters at your fingertips.
+                    </p>
+                    </div>
+                    
+                    <img src="asstets/patterns/left-downward-arrow.svg" alt="" class="main__section__advantages__article__arrow">
+                  </article>
+        
+        
+                  <article class="main__section__advantages__article main__section__advantages__article__circle2">
+                    <img src="asstets/img/better-living.jpg" alt="" class="main__section__advantages__article__img">
+                    <div class="main__section__advantages__article__container">
+                      <p class="main__section__advantages__article__container__title main__title">
+                        Better urban living
+                      </p>
+                    <p class="main__section__advantages__article__container__text main__text">
+                      We’re helping connect cities and bring people closer together. Our scooters are also fully-electric and we offset the minimal carbon footprint for each ride.
+                    </p>
+                    </div>
+                    
+                    <img src="asstets/patterns/right-arrow.svg" alt="" class="main__section__advantages__article__arrow_about2">
+                  </article>
+                  </section>
+
+                  <section class="main__section__values">
+                    <p class="main__section__values__title main__title">Our values</p>
+                    <div class="main__section__values__container">
+                      <article class="main__section__values__container__article">
+                                              
+                        <img src="asstets/img/our-tech.jpg" alt="" class="main__section__values__container__article__img">
+                        <p class="main__section__values__container__article__circle">01</p>
+                        <p class="main__section__values__container__article__title main__title">Our tech</p>
+                        <p class="main__section__values__container__article__text main__text">
+                            We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!</p>
+                    </article>
+
+                    <article class="main__section__values__container__article">
+                        <img src="asstets/img/our-integrity.jpg" alt="" class="main__section__values__container__article__img">
+                        <p class="main__section__values__container__article__circle">02</p>
+                        <p class="main__section__values__container__article__title main__title">Our integrity</p>
+                        <p class="main__section__values__container__article__text main__text">
+                            We are fully committed to deliver a great yet safe, sustainable micro-mobility experience in every city we serve.</p>
+                    </article>
+
+                    <article class="main__section__values__container__article">
+                        <img src="asstets/img/our-community.jpg" alt="" class="main__section__values__container__article__img">
+                        <p class="main__section__values__container__article__circle">03</p>
+                        <p class="main__section__values__container__article__title main__title">Our community</p>
+                        <p class="main__section__values__container__article__text main__text">
+                            We support every community we serve. All workers are paid a living wage based on their location and are Scoot employees.</p>
+                    </article>
+                    </div>
+                    
+                  </section>
+
+                  <section class="main__section__faqs">
+
+
+                    <div class="main__section__faqs__container0">
+                      <p class="main__section__faqs__container0__title">FAQs</p>
+                    </div>
+                    
+
+                    <div class="main__section__faqs__principal__container">
+
+                      <div class="main__section__faqs__principal__container__container">
+                        <p class="main__section__faqs__principal__container__container__work">How it works</p>
+                      </div>
+
+
+                     <div class="main__section__faqs__principal__container__container2">
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            How do I download the app?
+                          </p>
+                          <p class="main__section__faqs__principal__container__container2__article__text">
+                            To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.
+                          </p>
+                        </article>
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            Can I find a nearby Scoots?
+                          </p>
+                        </article>
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            Do I need a license to ride?
+                          </p>
+                        </article>
+                    </div> 
+                    </div>
+                    
+
+                    
+      
+
+                  </section>
+
+                  <!--Segundo-->
+                  <section class="main__section__faqs">
+                    
+
+                    <div class="main__section__faqs__principal__container">
+
+                      <div class="main__section__faqs__principal__container__container">
+                        <p class="main__section__faqs__principal__container__container__work">Safe driving</p>
+                      </div>
+
+
+                     <div class="main__section__faqs__principal__container__container2">
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            Should I wear a helmet?
+                          </p>
+                          <p class="main__section__faqs__principal__container__container2__article__text">
+                            Yes, please do! All cities have different laws. But we strongly strongly strongly recommend always wearing a helmet regardless of the local laws. We like you and we want you to be as safe as possible while Scooting.
+                          </p>
+                        </article>
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            How about the rules & regulations?
+                          </p>
+                        </article>
+                        <article class="main__section__faqs__principal__container__container2__article">
+                          <p class="main__section__faqs__principal__container__container2__article__title">
+                            What if I damage my Scoot?
+                          </p>
+                        </article>
+                    </div> 
+                    </div>
+                    
+
+                    
+      
+
+                  </section>
+
+
+                  <section class="main__section__app">
+                    <article class="main__section__app__article">
+                        <p class="main__section__app__article__title">
+                      Sign up and Scoot off today
+                      </p>
+        
+                      <figure class="main__section__app__article__figure">
+                        <img src="asstets/icons/app-store.svg" alt="" class="main__section__app__article__figure__img">
+                        <img src="asstets/icons/google-play.svg" alt="" class="main__section__app__article__figure__img">
+                      </figure>
+                    </article>
+                  
+                </section>
+            </main>
+
+
+            <footer class="footer">
+                <p class="footer__title">
+                  scoot
+                </p>
+                <header class="footer__header">
+                  <a href="about.html" class="footer__header__text">About</a>
+                  <a href="locations.html" class="footer__header__text">Location</a>
+                  <a href="careers.html" class="footer__header__text">Careers</a>
+                </header>
+                <div class="footer__container">
+                  <figure class="footer__container__social">
+                    <img src="asstets/icons/facebook.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/twitter.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/instagram.svg" alt="" class="footer__container__social__network">
+                  </figure>
+                </div>
+              </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__logo{
+       max-width: 100px;
+       
+    }
+    #toggleMenu{
+        color: orange;
+        background-color: white;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        position: absolute;
+        left: 0;
+    }
+    .header__ul{
+        display: none;
+        
+    }
+    @include breakpoint (tablet){
+        justify-content: space-between;
+        padding: 20px;
+        &__logo{
+            max-width: 100px;
+        }
+        #toggleMenu{
+            display: none;
+        }
+        .header__ul{
+            display: block;
+            display: flex;
+            gap: 70px;
+            margin: 0;
+            &__li{
+            list-style: none;
+                &__a{
+                    text-decoration: none;
+                    color: $dar_navy;
+                    align-items: center;
+                    font-family: 'Space Mono';
+                    font-weight: 700;
+                    
+                }
+                &__buy{
+                    background-color: $yellow;
+                    padding: 10px 25px;
+                    color: white;
+                    font-weight: bold;
+                }
+                
+            }
+        }
+    }
+    @include breakpoint(desktop){
+        justify-content: start;
+        &__logo{
+            max-width: 120px;
+            margin-right: 50px;
+        }
+        .header__ul{
+            display: flex;
+            gap: 70px;
+            margin: 0;
+            &__li{
+            list-style: none;
+                &__a{
+                    text-decoration: none;
+                    color: $dar_navy;
+                    align-items: center;
+                    font-family: 'Space Mono';
+                    font-weight: 700;
+                    
+                }
+                &__buy{
+                    background-color: $yellow;
+                    padding: 10px 25px;
+                    color: white;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 25px;
+                    top: 13px;
+                }
+                
+            }
+        }
+    }
+}

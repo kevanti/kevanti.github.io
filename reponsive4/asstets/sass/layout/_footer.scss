@@ -1,0 +1,60 @@
+.footer{
+    background-color: #333A44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px;
+
+    &__title{
+         @include title();
+         font-size: 28px;
+         font-weight: 700;
+         color: white;
+         margin-bottom: 20px;
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        &__text{
+            @include text();
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            color: $dim_grey;
+        }
+        
+    }
+    &__container{
+            &__social{
+                display: flex;
+                gap: 20px;
+                &__network{
+                    max-width: 18px;
+                }
+            }
+    }
+
+    @include breakpoint(tablet){
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 0px;
+        justify-content: space-around;
+        &__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        &__header{
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

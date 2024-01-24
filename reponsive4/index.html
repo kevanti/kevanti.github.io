@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Sass Base Project</title>
+
+    <link rel="stylesheet" href="asstets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!--Menu-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+      #sideNav {
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: #495567;
+      }
+
+      #sideNav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+      #sideNav:last-child {
+        background-color: yellow;
+        max-width: fit-content;
+        display: flex;
+      }
+
+      #sideNav a.buttin{
+        background-color: yellow;
+      }
+
+      #sideNav a:hover {
+          color: #f1f1f1;
+      }
+
+      #main {
+          transition: margin-left .5s;
+      }
+
+      #toggleMenu {
+          display: none;
+      }
+  </style>
+  </head>
+  <body>
+    <script type="module" src="/main.js"></script>
+
+    <div class="container">
+      <header class="header">
+          
+        <button id="toggleMenu" class="btn btn-dark" onclick="toggleMenu()">☰</button>
+        <img src="asstets/img/logo.svg" alt="" class="header__logo">
+
+        <ul class="header__ul">
+          <li class="header__ul__li"><a href="about.html" class="header__ul__li__a">About</a></li>
+          <li class="header__ul__li"><a href="locations.html" class="header__ul__li__a">Location</a></li>
+          <li class="header__ul__li"><a href="careers.html" class="header__ul__li__a">Careers</a></li>
+          <li class="header__ul__li"><a href="#" class="header__ul__li__a header__ul__li__buy">Get Scootin</a></li>
+        </ul>
+    </header>
+
+    <div id="sideNav" class="bg-dark">
+        <a href="#" class="text-white" onclick="cerrarMenu()">×</a>
+        <a href="about.html">About</a>
+        <a href="locations.html">Location de</a>
+        <a href="careers.html">Careers</a>
+        <a href="#" id="buttonGet">Get Scootin</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      function toggleMenu() {
+        var sideNav = document.getElementById("sideNav");
+        var mainContent = document.getElementById("main");
+
+        // Obtener el ancho calculado
+        var sideNavWidth = window.getComputedStyle(sideNav).width;
+
+        if (sideNavWidth === "250px") {
+          cerrarMenu();
+        } else {
+          abrirMenu();
+        }
+      }
+
+      function abrirMenu() {
+        document.getElementById("sideNav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function cerrarMenu() {
+        document.getElementById("sideNav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+
+      <main class="main">
+          <div class="main__container__information">
+          <h1 class="main__container__information__h1 main__title">Scooter sharing made simple</h1>
+        <p class="main__container__information__text main__text">
+          Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!
+        </p>
+        <a href="" class="main__container__information__button">Get Scootin</a>
+        <img src="asstets/patterns/right-arrow.svg" alt="" class="main__container__information__arrow">
+        <img src="asstets/patterns/line.svg" alt="" class="main__container__information__line">
+        </div>
+
+        <section class="main__section">
+          <article class="main__section__article__offerts">
+            <figure class="main__section__article__offerts__figure">
+              <img src="asstets/icons/locate.svg" alt="" class="main__section__article__offerts__figure__locate">
+            </figure>
+            
+            <div class="main__section__article__offerts__container__text">
+              <p class="main__section__article__offerts__container__text__title main__title">Locate with app</p>
+              <p class="main__section__article__offerts__container__text__text main__text">Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
+            </div>
+            
+          </article>
+
+          <article class="main__section__article__offerts">
+            <figure class="main__section__article__offerts__figure">
+              <img src="asstets/icons/scooter.svg" alt="" class="main__section__article__offerts__figure__locate">
+            </figure>
+            
+            <div class="main__section__article__offerts__container__text">
+              <p class="main__section__article__offerts__container__text__title main__title">Pick your scooter</p>
+              <p class="main__section__article__offerts__container__text__text main__text">We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
+            </div>
+            
+          </article>
+
+          <article class="main__section__article__offerts">
+            <figure class="main__section__article__offerts__figure">
+              <img src="asstets/icons/ride.svg" alt="" class="main__section__article__offerts__figure__locate">
+            </figure>
+            
+            <div class="main__section__article__offerts__container__text">
+              <p class="main__section__article__offerts__container__text__title main__title">Enjoy the ride</p>
+              <p class="main__section__article__offerts__container__text__text main__text">Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps.</p>
+            </div>
+            
+          </article>
+        </section>
+
+
+        <section class="main__section__advantages">
+            <article class="main__section__advantages__article main__section__advantages__article__circle">
+              <img src="asstets/img/telemetry.jpg" alt="" class="main__section__advantages__article__img">
+              <div class="main__section__advantages__article__container">
+                <p class="main__section__advantages__article__container__title main__title">
+                Easy to use riding telemetry
+              </p>
+              <p class="main__section__advantages__article__container__text main__text">
+                The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.
+              </p>
+              <a href="" class="main__section__advantages__article__container__button">Learn More</a>
+              </div>
+              
+              <img src="asstets/patterns/left-downward-arrow.svg" alt="" class="main__section__advantages__article__arrow">
+            </article>
+
+
+            <article class="main__section__advantages__article main__section__advantages__article__circle2">
+              <img src="asstets/img/near-you.jpg" alt="" class="main__section__advantages__article__img">
+              <div class="main__section__advantages__article__container">
+                <p class="main__section__advantages__article__container__title main__title">
+                Easy to use riding telemetry
+              </p>
+              <p class="main__section__advantages__article__container__text main__text">
+                The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.
+              </p>
+              <a href="" class="main__section__advantages__article__container__button">Learn More</a>
+              </div>
+              
+              <img src="asstets/patterns/left-downward-arrow.svg" alt="" class="main__section__advantages__article__arrow2">
+            </article>
+
+
+            <article class="main__section__advantages__article main__section__advantages__article__circle">
+              <img src="asstets/img/payments.jpg" alt="" class="main__section__advantages__article__img">
+              <div class="main__section__advantages__article__container">
+                <p class="main__section__advantages__article__container__title main__title">
+                Easy to use riding telemetry
+              </p>
+              <p class="main__section__advantages__article__container__text main__text">
+                The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.
+              </p>
+              <a href="" class="main__section__advantages__article__container__button">Learn More</a>
+              </div>
+              
+              <img src="asstets/patterns/left-downward-arrow.svg" alt="" class="main__section__advantages__article__arrow3">
+            </article>
+          </section>
+
+
+          <section class="main__section__app">
+            <article class="main__section__app__article">
+                <p class="main__section__app__article__title">
+              Sign up and Scoot off today
+              </p>
+
+              <figure class="main__section__app__article__figure">
+                <img src="asstets/icons/app-store.svg" alt="" class="main__section__app__article__figure__img">
+                <img src="asstets/icons/google-play.svg" alt="" class="main__section__app__article__figure__img">
+              </figure>
+            </article>
+          
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__title">
+          scoot
+        </p>
+        <header class="footer__header">
+          <a href="about.html" class="footer__header__text">About</a>
+          <a href="locations.html" class="footer__header__text">Location</a>
+          <a href="careers.html" class="footer__header__text">Careers</a>
+        </header>
+        <div class="footer__container">
+          <figure class="footer__container__social">
+            <img src="asstets/icons/facebook.svg" alt="" class="footer__container__social__network">
+            <img src="asstets/icons/twitter.svg" alt="" class="footer__container__social__network">
+            <img src="asstets/icons/instagram.svg" alt="" class="footer__container__social__network">
+          </figure>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>locations</title>
+
+
+        <link rel="stylesheet" href="asstets/css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+                  <!--Menu-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+      #sideNav {
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: #495567;
+      }
+
+      #sideNav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      #sideNav a:hover {
+          color: #f1f1f1;
+      }
+
+      #main {
+          transition: margin-left .5s;
+      }
+
+      #toggleMenu {
+          display: none;
+      }
+  </style>
+    </head>
+    <body>
+      <script type="module" src="/main.js"></script>
+
+      <div class="container">
+        <header class="header">
+          
+          <button id="toggleMenu" class="btn btn-dark" onclick="toggleMenu()">☰</button>
+          <img src="asstets/img/logo.svg" alt="" class="header__logo">
+  
+          <ul class="header__ul">
+            <li class="header__ul__li"><a href="about.html" class="header__ul__li__a">About</a></li>
+            <li class="header__ul__li"><a href="locations.html" class="header__ul__li__a">Location</a></li>
+            <li class="header__ul__li"><a href="careers.html" class="header__ul__li__a">Careers</a></li>
+            <li class="header__ul__li"><a href="#" class="header__ul__li__a header__ul__li__buy">Get Scootin</a></li>
+          </ul>
+      </header>
+  
+      <div id="sideNav" class="bg-dark">
+          <a href="#" class="text-white" onclick="cerrarMenu()">×</a>
+          <a href="about.html">About</a>
+          <a href="locations.html">Location de</a>
+          <a href="careers.html">Careers</a>
+          <a href="#">Get Scootin</a>
+      </div>
+  
+      <div id="main">
+          <!-- Contenido principal aquí -->
+      </div>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+      <script>
+        function toggleMenu() {
+          var sideNav = document.getElementById("sideNav");
+          var mainContent = document.getElementById("main");
+  
+          // Obtener el ancho calculado
+          var sideNavWidth = window.getComputedStyle(sideNav).width;
+  
+          if (sideNavWidth === "250px") {
+            cerrarMenu();
+          } else {
+            abrirMenu();
+          }
+        }
+  
+        function abrirMenu() {
+          document.getElementById("sideNav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        function cerrarMenu() {
+          document.getElementById("sideNav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+
+            <main class="main__location">
+                <div class="main__location__container__information__location">
+                    <p class="main__location__container__information__location__title main__title">Locations</p>
+                </div>
+
+                <figure class="main__location__figure">
+                    <img src="asstets/img/world-map-mobile.png" alt="" class="main__location__figure__img">
+                    <img src="asstets/img/world-map-tablet.png" alt="" class="main__location__figure__img2">
+                </figure>
+
+                <div class="main__location__container__countries">
+                    <a href="" class="main__location__container__countries__button">New York</a>
+                    <a href="" class="main__location__container__countries__button">London</a>
+                    <a href="" class="main__location__container__countries__button">Jakarta</a>
+                    <a href="" class="main__location__container__countries__button">Yokohama</a>
+                </div>
+
+
+                <section class="main__section__location">
+                  <article class="main__section__location__article">
+                    <div class="main__section__location__article__container">
+                      <p class="main__section__location__article__container__title">
+                        Your City Not Listed?
+                      </p>
+                    <p class="main__section__location__article__container__text">
+                      If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.
+                    </p>
+                    <a href="" class="main__section__location__article__container__button">Learn More</a>
+                    </div>
+                  </article>
+                  </section>
+
+
+                  <section class="main__section__app">
+                    <article class="main__section__app__article">
+                        <p class="main__section__app__article__title">
+                      Sign up and Scoot off today
+                      </p>
+        
+                      <figure class="main__section__app__article__figure">
+                        <img src="asstets/icons/app-store.svg" alt="" class="main__section__app__article__figure__img">
+                        <img src="asstets/icons/google-play.svg" alt="" class="main__section__app__article__figure__img">
+                      </figure>
+                    </article>
+                  
+                </section>
+            </main>
+
+
+            <footer class="footer">
+                <p class="footer__title">
+                  scoot
+                </p>
+                <header class="footer__header">
+                  <a href="about.html" class="footer__header__text">About</a>
+                  <a href="locations.html" class="footer__header__text">Location</a>
+                  <a href="careers.html" class="footer__header__text">Careers</a>
+                </header>
+                <div class="footer__container">
+                  <figure class="footer__container__social">
+                    <img src="asstets/icons/facebook.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/twitter.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/instagram.svg" alt="" class="footer__container__social__network">
+                  </figure>
+                </div>
+              </footer>
+        </div>
+    </body>
+</html>
