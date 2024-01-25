@@ -1,0 +1,200 @@
+/*** CONTAINER FOR THE MAIN CONTENT ***/
+.locations-container {
+  padding: 0 $padding-side-desktop 12rem;
+
+  @include respond(tablet) {
+    padding: 0 $padding-side-tablet-sm 12rem;
+  }
+
+  @include respond(mobile) {
+    padding: 0 $padding-side-mobile 7.2rem;
+  }
+}
+
+/*** MAP SECTION ***/
+.map {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12rem;
+
+  @include respond(tablet) {
+    margin-bottom: 6.4rem;
+  }
+
+  @include respond(mobile) {
+    margin-bottom: 7.2rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__tag {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+
+    @include respond(tablet) {
+      transform: translateY(-5px); // responding to a slight shift in the image's dimensions
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: -2rem;
+      width: 4rem;
+      height: 2rem;
+      background-color: $color-primary;
+      -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+
+      @include respond(tablet) {
+        left: -1rem;
+        top: -0.5rem;
+        width: 2rem;
+        height: 1rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8.9rem;
+      left: -9.45rem;
+      width: 18.9rem;
+      height: 7rem;
+      background-color: $color-primary;
+
+      @include respond(tablet) {
+        top: -3.4rem;
+        left: -6rem;
+        width: 12rem;
+        height: 3rem;
+      }
+    }
+
+    &#new-york {
+      bottom: 70%;
+      left: 21%;
+    }
+
+    &#london {
+      top: 19%;
+      left: 44%;
+    }
+
+    &#yokohama {
+      top: 30%;
+      right: 14%;
+    }
+
+    &#jakarta {
+      right: 21.25%;
+      bottom: 38.5%;
+    }
+  }
+
+  &__tag-name {
+    position: absolute;
+    top: -7.35rem;
+    left: -9.45rem;
+    width: 18.9rem;
+    text-align: center;
+    font-size: 2.3rem;
+    z-index: 999;
+
+    @include respond(tablet) {
+      font-size: 1.3rem;
+      left: -6rem;
+      width: 12rem;
+      top: -2.9rem;
+    }
+  }
+}
+
+/*** LOCATIONS LIST ON MOBILE ***/
+.location-list {
+  display: none;
+
+  @include respond(mobile) {
+    display: block;
+    max-width: 50rem;
+    margin: auto;
+    margin-top: 4rem;
+
+    &__item {
+      width: 100%;
+      background-color: $color-pink;
+      padding: 2.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}
+
+/*** REQUEST SECTION ***/
+.request {
+  display: flex;
+  align-items: center;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    text-align: center;
+    $padding-rq: calc(#{$padding-side-tablet-lg} - #{$padding-side-tablet-sm});
+    padding: 0 $padding-rq;
+    max-width: 80rem;
+    margin: auto;
+
+    @include respond(mobile) {
+      padding: 0;
+    }
+  }
+
+  &__heading {
+    width: 24.4vw;
+    margin-right: 3rem;
+
+    @include respond(tablet) {
+      width: 59.5vw;
+      margin-right: 0;
+      margin-bottom: 4rem;
+      max-width: 60rem;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__text {
+    width: 31vw;
+
+    @include respond(tablet) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(mobile) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    @include respond(tablet) {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.btn {
+  text-decoration: none;
+  background-color: $color-primary;
+  color: #fff;
+  padding: 1.4rem 4rem;
+  font-family: "Space Mono", monospace;
+  border: 3px solid $color-primary;
+  transition: color 0.35s, background-color 0.7s;
+
+  &--wide {
+    padding: 1.4rem 6.7rem;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $color-primary;
+  }
+}

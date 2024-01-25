@@ -1,0 +1,67 @@
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  color: $color-grey-dark;
+  line-height: 1.667;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: $color-dark;
+}
+
+.heading-1 {
+  font-size: 5.6rem;
+  letter-spacing: -2.5px;
+  line-height: 1;
+
+  @include respond(mobile) {
+    font-size: 4rem;
+    letter-spacing: -1.79px;
+  }
+}
+
+.heading-2 {
+  font-size: 4.8rem;
+  letter-spacing: -2.14px;
+  line-height: 1;
+
+  @include respond(mobile) {
+    font-size: 3.2rem;
+    letter-spacing: -1.43px;
+  }
+}
+
+.heading-3 {
+  font-size: 4rem;
+  letter-spacing: -1.79px;
+  line-height: 1.2;
+
+  @include respond(mobile) {
+    font-size: 2.4rem;
+    letter-spacing: -1.07px;
+    line-height: 1.167;
+  }
+}
+
+.heading-4 {
+  font-size: 2.4rem;
+  letter-spacing: -1.07px;
+  line-height: 1.167;
+
+  @include respond(mobile) {
+    &:not(.features__title):not(.features__number):not(.locations-list__name) {
+      font-size: 2rem;
+      letter-spacing: -0.89px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.section-heading {
+  text-align: center;
+}
