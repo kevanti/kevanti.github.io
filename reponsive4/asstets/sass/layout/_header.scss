@@ -1,152 +1,91 @@
-.header {
-  padding: 2.1rem $padding-side-desktop;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-
-  @include respond(tablet) {
-    padding: 2.1rem $padding-side-tablet-sm;
-  }
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(#fff, 0.9);
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 13px 1px;
-    animation: appearFromTop 0.6s;
-    z-index: 99999;
-  }
-
-  &__nav-toggle {
-    display: none;
-  }
-
-  &__navigation {
-    margin-left: 8rem;
-    flex: 1;
-
-    @include respond(tablet) {
-      margin-left: 8%;
-    }
-
-    @media only screen and (max-width: 710px) {
-      margin-left: 5%;
-    }
-  }
-
-  &__nav-list {
+.header{
     display: flex;
+    justify-content: center;
     align-items: center;
-  }
-
-  &__nav-link {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.6s;
-
-    &:hover {
-      color: $color-primary;
-    }
-
-    &:not(:last-child) {
-      margin-right: 3.2rem;
-    }
-  }
-
-  &__btn {
-    margin-left: auto;
-  }
-
-  /*** MOBILE VIEW ***/
-  @include respond(mobile) {
-    padding: 0 $padding-side-mobile;
-    height: 6.4rem;
     position: relative;
-    z-index: 999;
-
-    &__logo {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+    &__logo{
+       max-width: 100px;
+       
     }
-
-    &__nav-toggle {
-      display: block;
+    #toggleMenu{
+        color: orange;
+        background-color: white;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        position: absolute;
+        left: 0;
     }
-
-    &__navigation {
-      position: fixed;
-      top: 6.4rem;
-      left: 0;
-      width: 100vw;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.75);
-      margin: 0;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.3s;
-
-      &.open {
-        visibility: visible;
-        opacity: 1;
-      }
+    .header__ul{
+        display: none;
+        
     }
-
-    &__nav-list {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      background-color: #333a44;
-      padding: 6.4rem $padding-side-mobile 9rem $padding-side-mobile;
-      text-align: center;
-      margin: auto;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 0;
-      overflow: hidden;
-      transition: width 0.6s;
+    @include breakpoint (tablet){
+        justify-content: space-between;
+        padding: 20px;
+        &__logo{
+            max-width: 100px;
+        }
+        #toggleMenu{
+            display: none;
+        }
+        .header__ul{
+            display: block;
+            display: flex;
+            gap: 70px;
+            margin: 0;
+            &__li{
+            list-style: none;
+                &__a{
+                    text-decoration: none;
+                    color: $dar_navy;
+                    align-items: center;
+                    font-family: 'Space Mono';
+                    font-weight: 700;
+                    
+                }
+                &__buy{
+                    background-color: $yellow;
+                    padding: 10px 25px;
+                    color: white;
+                    font-weight: bold;
+                }
+                
+            }
+        }
     }
-
-    &__navigation.open &__nav-list {
-      width: 25.6rem;
-
-      @media only screen and (max-width: 315px) {
-        width: 85vw;
-      }
+    @include breakpoint(desktop){
+        justify-content: start;
+        &__logo{
+            max-width: 120px;
+            margin-right: 50px;
+        }
+        .header__ul{
+            display: flex;
+            gap: 70px;
+            margin: 0;
+            &__li{
+            list-style: none;
+                &__a{
+                    text-decoration: none;
+                    color: $dar_navy;
+                    align-items: center;
+                    font-family: 'Space Mono';
+                    font-weight: 700;
+                    
+                }
+                &__buy{
+                    background-color: $yellow;
+                    padding: 10px 25px;
+                    color: white;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 25px;
+                    top: 13px;
+                }
+                
+            }
+        }
     }
-
-    &__nav-link {
-      color: $color-grey-light;
-      font-size: 1.8rem;
-      display: none;
-
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 2.4rem;
-      }
-    }
-
-    &__btn {
-      margin-left: 0;
-      margin-top: auto;
-      align-self: stretch;
-      padding-left: 0;
-      padding-right: 0;
-      display: none;
-    }
-
-    &__navigation.open &__nav-link,
-    &__navigation.open &__btn {
-      // animation for the these elements is applied using keyframes and javascript
-      display: block;
-    }
-  }
 }

@@ -1,1 +1,1 @@
-import './sass/style.scss'
+import './asstets/sass/style.scss'

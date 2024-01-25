@@ -1,189 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>locations</title>
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="asstets/img/favicon-32x32.png"
-    />
 
-    <title>Locations</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/5225b7dab1.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="asstets/css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <img
-        src="asstets/img/icons/hamburger.svg"
-        alt="nav-toggle"
-        class="header__nav-toggle"
-      />
-      <a href="./index.html">
-        <img src="asstets/img/logo.svg" alt="logo" class="logo header__logo" />
-      </a>
-      <nav class="header__navigation">
-        <div class="header__nav-list">
-          <a href="about.html" class="header__nav-link">About</a>
-          <a href="locations.html" class="header__nav-link">Location</a>
-          <a href="careers.html" class="header__nav-link">Careers</a>
-          <a href="#c" class="btn header__btn">Get Scootin</a>
-        </div>
-      </nav>
-    </header>
+        <link rel="stylesheet" href="asstets/css/style.css">
 
-    <section class="page-heading">
-      <picture>
-        <source
-          srcset="asstets/img/careers-locations-hero-tablet.jpg"
-          media="(max-width: 1100px) and (min-width: 601px)"
-        />
-        <source
-          srcset="asstets/img/careers-location-hero-mobile.jpg"
-          media="(max-width: 600px)"
-        />
-        <img
-          alt="careers-location"
-          src="asstets/img/careers-locations-hero-desktop.jpg"
-          class="page-heading__bg"
-        />
-      </picture>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-      <div class="page-heading__container">
-        <h1 class="heading-1 page-heading__heading">Locations</h1>
-        <img
-          src="asstets/img/patterns/white-circles.svg"
-          alt="circles"
-          class="page-heading__circles"
-        />
+
+                  <!--Menu-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+      #sideNav {
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: #495567;
+      }
+
+      #sideNav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      #sideNav a:hover {
+          color: #f1f1f1;
+      }
+
+      #main {
+          transition: margin-left .5s;
+      }
+
+      #toggleMenu {
+          display: none;
+      }
+  </style>
+    </head>
+    <body>
+      <script type="module" src="/main.js"></script>
+
+      <div class="container">
+        <header class="header">
+          
+          <button id="toggleMenu" class="btn btn-dark" onclick="toggleMenu()">☰</button>
+          <img src="asstets/img/logo.svg" alt="" class="header__logo">
+  
+          <ul class="header__ul">
+            <li class="header__ul__li"><a href="about.html" class="header__ul__li__a">About</a></li>
+            <li class="header__ul__li"><a href="locations.html" class="header__ul__li__a">Location</a></li>
+            <li class="header__ul__li"><a href="careers.html" class="header__ul__li__a">Careers</a></li>
+            <li class="header__ul__li"><a href="#" class="header__ul__li__a header__ul__li__buy">Get Scootin</a></li>
+          </ul>
+      </header>
+  
+      <div id="sideNav" class="bg-dark">
+          <a href="#" class="text-white" onclick="cerrarMenu()">×</a>
+          <a href="about.html">About</a>
+          <a href="locations.html">Location de</a>
+          <a href="careers.html">Careers</a>
+          <a href="#">Get Scootin</a>
       </div>
-    </section>
-
-    <main class="locations-container">
-      <section class="map">
-        <picture>
-          <source
-            srcset="asstets/img/world-map-tablet.png"
-            media="(max-width: 1100px) and (min-width: 701px)"
-          />
-          <source
-            srcset="asstets/img/world-map-mobile.png"
-            media="(max-width: 700px)"
-          />
-          <img
-            alt="world-map"
-            src="asstets/img/world-map-desktop.png"
-            class="map__img"
-          />
-        </picture>
-        <div class="map__tag" id="new-york">
-          <h4 class="map__tag-name">New York</h4>
-        </div>
-        <div class="map__tag" id="london">
-          <h4 class="map__tag-name">London</h4>
-        </div>
-        <div class="map__tag" id="yokohama">
-          <h4 class="map__tag-name">Yokohama</h4>
-        </div>
-        <div class="map__tag" id="jakarta">
-          <h4 class="map__tag-name">Jakarta</h4>
-        </div>
-
-        <div class="location-list">
-          <div class="location-list__item">
-            <h4 class="heading-4 location-list__name">New York</h4>
-          </div>
-          <div class="location-list__item">
-            <h4 class="heading-4 location-list__name">London</h4>
-          </div>
-          <div class="location-list__item">
-            <h4 class="heading-4 location-list__name">Yokohama</h4>
-          </div>
-          <div class="location-list__item">
-            <h4 class="heading-4 location-list__name">Jakarta</h4>
-          </div>
-        </div>
-      </section>
-
-      <section class="request" id="request">
-        <h2 class="heading-2 request__heading">Your city not listed?</h2>
-        <p class="request__text">
-          If you’d like to see Scoot in your hometown, be sure to let us know.
-          We track requests and plan launches based on demand. Feel free to
-          message us by clicking the link or messaging us on social.
-        </p>
-        <a href="#request" class="btn request__btn">Message Us</a>
-      </section>
-    </main>
-
-    <section class="cta" id="cta">
-      <h2 class="heading-2 cta__text">Sign up and Scoot off today</h2>
-      <div class="cta__download">
-        <a href="#cta" class="cta__download-link">
-          <div class="cta__download-button cta__download-button--apple">
-            <i class="cta__download-icon fab fa-apple"></i>
-            <div class="cta__download-text">
-              <p>Available on the</p>
-              <p>AppStore</p>
-            </div>
-          </div>
-        </a>
-        <a href="#cta" class="cta__download-link">
-          <div class="cta__download-button cta__download-button--google">
-            <i class="cta__download-icon fab fa-google-play"></i>
-            <div class="cta__download-text">
-              <p>Get it on</p>
-              <p>GooglePlay</p>
-            </div>
-          </div>
-        </a>
+  
+      <div id="main">
+          <!-- Contenido principal aquí -->
       </div>
-      <img
-        class="cta__pattern"
-        src="asstets/img/patterns/semi-circles.svg"
-        alt="semi-circles"
-      />
-    </section>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+      <script>
+        function toggleMenu() {
+          var sideNav = document.getElementById("sideNav");
+          var mainContent = document.getElementById("main");
+  
+          // Obtener el ancho calculado
+          var sideNavWidth = window.getComputedStyle(sideNav).width;
+  
+          if (sideNavWidth === "250px") {
+            cerrarMenu();
+          } else {
+            abrirMenu();
+          }
+        }
+  
+        function abrirMenu() {
+          document.getElementById("sideNav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        function cerrarMenu() {
+          document.getElementById("sideNav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
 
-    <footer class="footer">
-      <a href="./index.html">
-        <img src="asstets/img/logo-white.svg" alt="logo" class="logo footer__logo" />
-      </a>
-      <div class="footer__nav">
-        <a href="about.html" class="footer__nav-link">About</a>
-        <a href="locations.html" class="footer__nav-link">Location</a>
-        <a href="careers.html" class="footer__nav-link">Careers</a>
-      </div>
-      <div class="footer__social">
-        <a href="#cta" class="footer__social-link">
-          <svg class="footer__social-icon">
-            <use xlink:href="asstets/img/icons/facebook.svg#icon"></use>
-          </svg>
-        </a>
-        <a href="#cta" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-icon--small">
-            <use xlink:href="asstets/img/icons/twitter.svg#icon"></use>
-          </svg>
-        </a>
-        <a href="#cta" class="footer__social-link">
-          <svg class="footer__social-icon">
-            <use xlink:href="asstets/img/icons/instagram.svg#icon"></use>
-          </svg>
-        </a>
-      </div>
-    </footer>
+            <main class="main__location">
+                <div class="main__location__container__information__location">
+                    <p class="main__location__container__information__location__title main__title">Locations</p>
+                </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+                <figure class="main__location__figure">
+                    <img src="asstets/img/world-map-mobile.png" alt="" class="main__location__figure__img">
+                    <img src="asstets/img/world-map-tablet.png" alt="" class="main__location__figure__img2">
+                </figure>
+
+                <div class="main__location__container__countries">
+                    <a href="" class="main__location__container__countries__button">New York</a>
+                    <a href="" class="main__location__container__countries__button">London</a>
+                    <a href="" class="main__location__container__countries__button">Jakarta</a>
+                    <a href="" class="main__location__container__countries__button">Yokohama</a>
+                </div>
+
+
+                <section class="main__section__location">
+                  <article class="main__section__location__article">
+                    <div class="main__section__location__article__container">
+                      <p class="main__section__location__article__container__title">
+                        Your City Not Listed?
+                      </p>
+                    <p class="main__section__location__article__container__text">
+                      If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.
+                    </p>
+                    <a href="" class="main__section__location__article__container__button">Learn More</a>
+                    </div>
+                  </article>
+                  </section>
+
+
+                  <section class="main__section__app">
+                    <article class="main__section__app__article">
+                        <p class="main__section__app__article__title">
+                      Sign up and Scoot off today
+                      </p>
+        
+                      <figure class="main__section__app__article__figure">
+                        <img src="asstets/icons/app-store.svg" alt="" class="main__section__app__article__figure__img">
+                        <img src="asstets/icons/google-play.svg" alt="" class="main__section__app__article__figure__img">
+                      </figure>
+                    </article>
+                  
+                </section>
+            </main>
+
+
+            <footer class="footer">
+                <p class="footer__title">
+                  scoot
+                </p>
+                <header class="footer__header">
+                  <a href="about.html" class="footer__header__text">About</a>
+                  <a href="locations.html" class="footer__header__text">Location</a>
+                  <a href="careers.html" class="footer__header__text">Careers</a>
+                </header>
+                <div class="footer__container">
+                  <figure class="footer__container__social">
+                    <img src="asstets/icons/facebook.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/twitter.svg" alt="" class="footer__container__social__network">
+                    <img src="asstets/icons/instagram.svg" alt="" class="footer__container__social__network">
+                  </figure>
+                </div>
+              </footer>
+        </div>
+    </body>
 </html>

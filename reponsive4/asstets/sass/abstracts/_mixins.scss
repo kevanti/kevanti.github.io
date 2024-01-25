@@ -1,19 +1,47 @@
-@mixin respond($breakpoint) {
-  // @if $breakpoint == tablet-land {
-  //   @media only screen and (max-width: 1200px) {
-  //     @content;
-  //   }
-  // }
-
-  @if $breakpoint == tablet {
-    @media only screen and (max-width: 1100px) {
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
       @content;
     }
   }
 
-  @if $breakpoint == mobile {
-    @media only screen and (max-width: 700px) {
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
       @content;
     }
   }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin title{
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+}
+@mixin text{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@mixin button{
+  background-color: $yellow;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Space mono', monospace;
+  padding: 10px 30px;
 }
