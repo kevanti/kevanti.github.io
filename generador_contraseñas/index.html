@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Sass Base Project</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Workbench&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+      <main class="main">
+        <h1 class="h1">Password Generator</h1>
+        <div class="password">
+          <p class="password__text">yourPassword</p>
+          <figure class="password__figure">
+            <img src="assets/img/Shape.svg" alt="" class="password__figure__copy" id="copy">
+          </figure>
+        </div>
+        <div class="password__length">
+
+          <div class="password__length__range">
+            <div class="password__length__range__input">
+              <p class="password__length__range__text">Character Length</p>
+            <input type="range" name="" id="range" min="0" max="20" value="10" class="password__length__range__input__input">
+            </div>
+            <p class="password__length__range__number" id="rangeNumber">10</p>
+          </div>
+          
+          <div class="password__checkbox">
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="uppercase">
+            <label for="" class="password__checkbox__label">Include Uppercase Letters</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="lowercase">
+            <label for="" class="password__checkbox__label">Include Lowercase Letters</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="numbers">
+            <label for="" class="password__checkbox__label">Include Numbers</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="symbols">
+            <label for="" class="password__checkbox__label">Include Symbols</label>
+            </div>
+          </div>
+          
+          
+          <div class="strength">
+            <p>Strength</p>
+            <div class="strength__password">
+              <p class="strength__password__text" id="passwordText"></p>
+              <div class="strength__password__container">
+              </div>
+              <div class="strength__password__container__div1" id="div1"></div>
+              <div class="strength__password__container__div2" id="div2"></div>
+              <div class="strength__password__container__div3" id="div3"></div>
+              <div class="strength__password__container__div4" id="div4"></div>
+            </div>
+          </div>
+          <a href="" class="button">Get Started <img src="assets/img/arrow-to-left.svg" alt="" class="button__arrow"></a>
+        </div> 
+      </main>
+
+    </div>
+
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./functions.js"></script>
+  </body>
+</html>
