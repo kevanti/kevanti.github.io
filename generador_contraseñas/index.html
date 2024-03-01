@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Sass Base Project</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Workbench&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-E9cc4zWZ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-d0pHEWG7.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <main class="main">
+        <h1 class="h1">Password Generator</h1>
+        <div class="password">
+          <p class="password__text">yourPassword</p>
+          <figure class="password__figure">
+            <img src="data:image/svg+xml,%3csvg%20width='18'%20height='20'%20viewBox='0%200%2018%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.9242%200.54918L16.9508%202.57582C17.3025%202.92745%2017.5%203.40436%2017.5%203.90164V14.375C17.5%2015.4105%2016.6605%2016.25%2015.625%2016.25H12.5V18.125C12.5%2019.1605%2011.6605%2020%2010.625%2020H1.875C0.839453%2020%200%2019.1605%200%2018.125V5.625C0%204.58945%200.839453%203.75%201.875%203.75H5V1.875C5%200.839453%205.83945%200%206.875%200H13.5984C14.0956%202.6003e-06%2014.5726%200.197548%2014.9242%200.54918ZM2.10938%2018.125H10.3906C10.4528%2018.125%2010.5124%2018.1003%2010.5564%2018.0564C10.6003%2018.0124%2010.625%2017.9528%2010.625%2017.8906V16.25H6.875C5.83945%2016.25%205%2015.4105%205%2014.375V5.625H2.10938C2.04721%205.625%201.9876%205.64969%201.94365%205.69365C1.89969%205.7376%201.875%205.79721%201.875%205.85938V17.8906C1.875%2017.9528%201.89969%2018.0124%201.94365%2018.0564C1.9876%2018.1003%202.04721%2018.125%202.10938%2018.125ZM15.3906%2014.375H7.10938C7.04721%2014.375%206.9876%2014.3503%206.94365%2014.3064C6.89969%2014.2624%206.875%2014.2028%206.875%2014.1406V2.10938C6.875%202.04721%206.89969%201.9876%206.94365%201.94365C6.9876%201.89969%207.04721%201.875%207.10938%201.875H11.25V5.3125C11.25%205.83027%2011.6697%206.25%2012.1875%206.25H15.625V14.1406C15.625%2014.2028%2015.6003%2014.2624%2015.5564%2014.3064C15.5124%2014.3503%2015.4528%2014.375%2015.3906%2014.375ZM13.125%204.375H15.625V3.99875C15.625%203.96797%2015.6189%203.93749%2015.6072%203.90905C15.5954%203.88061%2015.5781%203.85477%2015.5564%203.83301L13.667%201.94363C13.623%201.89969%2013.5634%201.875%2013.5012%201.875H13.125V4.375Z'%20fill='%23A4FFAF'/%3e%3c/svg%3e" alt="" class="password__figure__copy" id="copy">
+          </figure>
+        </div>
+        <div class="password__length">
+
+          <div class="password__length__range">
+            <div class="password__length__range__input">
+              <p class="password__length__range__text">Character Length</p>
+            <input type="range" name="" id="range" min="0" max="20" value="10" class="password__length__range__input__input">
+            </div>
+            <p class="password__length__range__number" id="rangeNumber">10</p>
+          </div>
+          
+          <div class="password__checkbox">
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="uppercase">
+            <label for="" class="password__checkbox__label">Include Uppercase Letters</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="lowercase">
+            <label for="" class="password__checkbox__label">Include Lowercase Letters</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="numbers">
+            <label for="" class="password__checkbox__label">Include Numbers</label>
+            </div>
+            <div class="password__chheckbox__uppercase">
+              <input type="checkbox" name="" id="symbols">
+            <label for="" class="password__checkbox__label">Include Symbols</label>
+            </div>
+          </div>
+          
+          
+          <div class="strength">
+            <p>Strength</p>
+            <div class="strength__password">
+              <p class="strength__password__text" id="passwordText"></p>
+              <div class="strength__password__container">
+              </div>
+              <div class="strength__password__container__div1" id="div1"></div>
+              <div class="strength__password__container__div2" id="div2"></div>
+              <div class="strength__password__container__div3" id="div3"></div>
+              <div class="strength__password__container__div4" id="div4"></div>
+            </div>
+          </div>
+          <a href="" class="button">Get Started <img src="data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5.10553%2012L11.1055%206.00002L5.10553%200L3.84051%201.26501L7.681%205.10547L6.10352e-05%205.10547V6.8946L7.681%206.8946L3.84051%2010.735L5.10553%2012Z'%20fill='%2324232C'/%3e%3c/svg%3e" alt="" class="button__arrow"></a>
+        </div> 
+      </main>
+
+    </div>
+
+
+  </body>
+</html>
